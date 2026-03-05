@@ -21,7 +21,7 @@ today's conditions with tomorrow's outcome.
 How to run locally (windows machine instructions):
 
 1. Clone the Repo:
-git clone https://github.com/yourusername/weather-ai-pipeline.git
+git clone https://github.com/gergo0505/budapest_weather_ml_pipeline
 
 2. Set up the Linux Environment (WSL):
 Apache Airflow requires a Linux environment. From an Ubuntu/WSL terminal, navigate to where you cloned
