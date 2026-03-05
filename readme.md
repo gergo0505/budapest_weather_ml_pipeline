@@ -1,8 +1,9 @@
+```text
 This project is an automated data engineering pipeline, that extracts daily weather data for Budapest,
 processes it in the cloud (AWS S3), and uses a machine learning model to predict tomorrow's temperature.
 
 Project Architecture:
-```text
+
 -dags/: daily_weather_pipeline.py: airflow manager
 -scripts/:
     -clean_history.py: used to prepare the raw historical weather dataset used for training
