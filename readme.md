@@ -2,18 +2,18 @@ This project is an automated data engineering pipeline, that extracts daily weat
 processes it in the cloud (AWS S3), and uses a machine learning model to predict tomorrow's temperature.
 
 Project Architecture:
-
-*-dags/: daily_weather_pipeline.py: airflow manager
-*-scripts/:
-*    -clean_history.py: used to prepare the raw historical weather dataset used for training
-*    -train_model.py: trains the linear regression model
-*    -extract_to_s3.py: daily API ingestion
-*    -transform_s3_data.py: transforming the daily weather data into usable form
-*    -cloud_predict.py: generates prediction for "tomorrow", storing results in the prediction_tracker.csv
-*    -update_master_csv.py: updates the master dataset with the daily weather data for later training
-*-data/: csv files used for training and prediction
-*-models/: the weather_model.pkl file
-*-automation/: .bat files for windows task scheduler integration
+```text
+-dags/: daily_weather_pipeline.py: airflow manager
+-scripts/:
+    -clean_history.py: used to prepare the raw historical weather dataset used for training
+    -train_model.py: trains the linear regression model
+    -extract_to_s3.py: daily API ingestion
+    -transform_s3_data.py: transforming the daily weather data into usable form
+    -cloud_predict.py: generates prediction for "tomorrow", storing results in the prediction_tracker.csv
+    -update_master_csv.py: updates the master dataset with the daily weather data for later training
+-data/: csv files used for training and prediction
+-models/: the weather_model.pkl file
+-automation/: .bat files for windows task scheduler integration
 
 The training logic:
 To train the AI, I shifted the historical temperature data by -1 day, allowing the model to correlate
