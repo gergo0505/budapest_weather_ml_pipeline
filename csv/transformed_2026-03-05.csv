@@ -1,0 +1,2 @@
+time,max_temp,min_temp,daylight_duration,sunshine_duration,precipitation_sum,wind_speed_10m_max,mean_temp,cloud_cover_mean,relative_humidity_2m_mean,pressure_msl_mean
+05/03/2026,16.3,7.3,40653.65,12364.94,0,16.2,11.3,41,64,1025.4
